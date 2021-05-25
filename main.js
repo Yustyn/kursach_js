@@ -70,13 +70,16 @@ kruti.addEventListener('mouseup', () => {
     }
     if (zekrutil) {
         usesome = false
+        random_multiplier1 = randomNumber(3, 8)
+        random_multiplier2 = randomNumber(10, 20)
+
         document.getElementById('baraban').style.transition = "10s"
         if (kruti.value > 5 && kruti.value < 15) {
-            document.getElementById('baraban').style.transform = `rotate(${val + (kruti.value + 5) * 10}deg)`
-            val += (kruti.value + 5) * 10
+            document.getElementById('baraban').style.transform = `rotate(${val + (kruti.value + random_multiplier1) * 10}deg)`
+            val += (kruti.value + random_multiplier1) * 10
         } else if (kruti.value >= 15) {
-            document.getElementById('baraban').style.transform = `rotate(${val + (kruti.value) * 20}deg)`
-            val += (kruti.value) * 20
+            document.getElementById('baraban').style.transform = `rotate(${val + (kruti.value) * random_multiplier2}deg)`
+            val += (kruti.value) * random_multiplier2
         }
 
         kruti.disabled = true
